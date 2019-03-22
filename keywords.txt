@@ -1,0 +1,25 @@
+###########################################
+# Syntax Coloring Map For PulseCom
+###########################################
+
+
+###########################################
+# Datatypes (KEYWORD1)
+###########################################
+
+PulseCom	KEYWORD1
+pulseCom_Timeout     KEYWORD1
+pulseCom_DataLength     KEYWORD1
+
+###########################################
+# Methods and Functions (KEYWORD2)
+###########################################
+
+begin	KEYWORD2
+available	KEYWORD2
+read	KEYWORD2
+printData	KEYWORD2
+
+###########################################
+# Constants (LITERAL1)
+###########################################

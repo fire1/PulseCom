@@ -26,7 +26,7 @@ __Loop:__
 
 ```
 if (com.available()) {
-    com.read(); // com.read(index); or com.printData(); to print data
+   ?= com.read(); // com.read(index); or com.printData(); to print data
 }
 ```
 ## Debug
@@ -45,6 +45,6 @@ Copyright (C) 2017  Arduino AG (http://www.arduino.cc/)
 
 You should have received a copy of the GNU Lesser General Public License
 along with this library. 
+ If not, see <http://www.gnu.org/licenses/>.
  
-If not, see <http://www.gnu.org/licenses/>.
 

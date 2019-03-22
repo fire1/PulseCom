@@ -26,7 +26,7 @@ __Loop:__
 
 ```
 if (com.available()) {
-    com.read(); // or com.printData(); to print data
+    com.read(); // com.read(index); or com.printData(); to print data
 }
 ```
 ## Debug

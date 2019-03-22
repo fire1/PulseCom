@@ -1,5 +1,0 @@
-C:/Users/Admin/Documents/Arduino/ParktronicData/cmake-build-debug/CMakeFiles/uno_CORE.dir
-C:/Users/Admin/Documents/Arduino/ParktronicData/cmake-build-debug/CMakeFiles/ParktronicData.dir
-C:/Users/Admin/Documents/Arduino/ParktronicData/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Admin/Documents/Arduino/ParktronicData/cmake-build-debug/CMakeFiles/ParktronicData-size.dir
-C:/Users/Admin/Documents/Arduino/ParktronicData/cmake-build-debug/CMakeFiles/rebuild_cache.dir

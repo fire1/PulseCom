@@ -20,3 +20,4 @@ $RECYCLE.BIN/
 
 # IDE configuration
 .idea
+cmake-build-debug

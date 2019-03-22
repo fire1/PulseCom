@@ -44,4 +44,6 @@ Consider to check "EnableInterrupt" library for available pins.
 Copyright (C) 2017  Arduino AG (http://www.arduino.cc/)
 
 You should have received a copy of the GNU Lesser General Public License
-along with this library.  If not, see <http://www.gnu.org/licenses/>.
+along with this library. 
+ 
+ If not, see <http://www.gnu.org/licenses/>.

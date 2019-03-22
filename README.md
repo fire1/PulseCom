@@ -24,12 +24,11 @@ com.begin();
 
 __Loop:__
 
-`
+```
 if (com.available()) {
     com.read(); // or com.printData(); to print data
 }
-
-`
+```
 ## Debug
 
 Define "PulseComDEBUG" to get length of all pulses from "getDebug" method.

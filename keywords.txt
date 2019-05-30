@@ -8,8 +8,8 @@
 ###########################################
 
 PulseCom	KEYWORD1
-pulseCom_Timeout     KEYWORD1
-pulseCom_DataLength     KEYWORD1
+pulseCom_Timeout	KEYWORD1
+pulseCom_DataLength	KEYWORD1
 
 ###########################################
 # Methods and Functions (KEYWORD2)

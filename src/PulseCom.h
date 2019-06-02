@@ -140,6 +140,7 @@ public:
         this->isMicros = isMicros;
         this->dataLength = dataLength;
     }
+
 /**
  *  ISR method for enableInterrupt
  */
@@ -188,6 +189,7 @@ public:
         if (isReceive)isReceive = false;
         return dataReceive[index];
     }
+
 /**
  * Prints captured data
  */
@@ -195,6 +197,10 @@ public:
         for (uint8_t i = 0; i < dataLength; ++i) {
             Serial.print(read(i), BIN);
         }
+    }
+
+    uint8_t getDataLength() {
+        return dataLength;
     }
 
 #ifdef PulseComDEBUG

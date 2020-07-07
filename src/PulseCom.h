@@ -6,12 +6,16 @@
 #define PulseCOM_H
 
 #include <Arduino.h>
+
+#ifndef HardwareInterrupt
+
 #include <EnableInterrupt.h>
 
 #ifndef EnableInterrupt_h
 
 #include "../../libraries/EnableInterrupt/EnableInterrupt.h"
 
+#endif
 #endif
 
 static void pulseComISR();
@@ -160,7 +164,12 @@ public:
  */
     void begin() {
         pinMode(pin, INPUT_PULLUP);
+
+#ifndef HardwareInterrupt
         enableInterrupt(pin, pulseComISR, CHANGE);
+#else
+        attachInterrupt(digitalPinToInterrupt(pin), pulseComISR, CHANGE);
+#endif
     }
 
 /**
@@ -203,6 +212,18 @@ public:
         return dataLength;
     }
 
+    /**
+     * This method is only informative, to determinate income pulses over pin.
+     * Uses pulseIn method to show income pulse times.
+     * */
+    void printPulseInfo() {
+        unsigned long pulse = pulseIn(pin, state, timeout);
+        if (pulse > 0) {
+            Serial.print(pulse);
+            Serial.print(" ");
+        }
+    }
+
 #ifdef PulseComDEBUG
 
     /**
@@ -226,12 +247,12 @@ public:
 
 };
 
-static volatile boolean PulseCom::isNewPulse;
-static volatile uint16_t PulseCom::pulseTime;
-static volatile unsigned long PulseCom::startTime;
-static byte PulseCom::state;
-static uint8_t PulseCom::pin;
-boolean static PulseCom::isMicros = false;
+volatile boolean PulseCom::isNewPulse;
+volatile uint16_t PulseCom::pulseTime;
+volatile unsigned long PulseCom::startTime;
+byte PulseCom::state;
+uint8_t PulseCom::pin;
+boolean PulseCom::isMicros = false;
 
 void pulseComISR() {
     PulseCom::isr();
